@@ -40,7 +40,7 @@ export default function Page() {
             fullWidth
             type="submit"
             radius="sm"
-            className="bg-transparent border-2 hover:bg-indigo-700 text-white shadow-sm font-semibold "
+            className="bg-transparent border-2 hover:bg-indigo-500 text-white font-semibold "
           >
             Register
           </Button>
@@ -57,11 +57,11 @@ export default function Page() {
         </div>
       )}
       <div className="border border-gray-300"></div>
-      <section className="flex justify-between items-center">
+      <section className="flex gap-x-2">
         <p className="text-white">Already have an account?</p>
-        <Button as={Link} href="/login" radius="sm" className="font-semibold">
-          Login
-        </Button>
+        <Link href="/login">
+          <p className="text-white hover:text-indigo-500 hover:underline">Login here</p>
+        </Link>
       </section>
     </main>
   );
