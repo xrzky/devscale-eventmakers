@@ -13,6 +13,7 @@
   "dependencies": {
     "@heroui/react": "^2.7.2",
     "@prisma/client": "^6.4.0",
+    "arctic": "^3.3.0",
     "bcrypt": "^5.1.1",
     "boring-avatars": "^1.11.2",
     "framer-motion": "^12.4.4",
