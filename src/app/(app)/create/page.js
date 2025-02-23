@@ -8,14 +8,17 @@ export default function Page() {
   const [state, formAction, pending] = useActionState(createEventAction, null);
 
   return (
-    <div className="flex items-center justify-center">
-      <form action={formAction} className="w-1/2 space-y-4 shadow-md p-8">
+    <div className="bg-stone-950 flex items-center justify-center h-max">
+      <form
+        action={formAction}
+        className="w-1/2 space-y-4 shadow-md p-8 border-lg border-white"
+      >
         <Input name="title" placeholder="Title" />
         <Input name="image" type="file" />
         <Input name="datetime" type="datetime-local" />
         <Input name="location" placeholder="Location" />
         <Textarea name="description" placeholder="Event description" />
-        <Button isLoading={pending} type="submit" color="primary">
+        <Button isLoading={pending} type="submit" color="secondary">
           Create Event
         </Button>
         {state?.status === "error" && (

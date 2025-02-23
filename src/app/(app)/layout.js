@@ -7,9 +7,9 @@ export default async function Layout({ children }) {
   const session = await auth();
 
   return (
-    <div className="relative">
+    <div className="bg-stone-950 relative">
       <header className="w-full px-4 py-4 flex justify-between items-center border-b-1">
-        <div className="font-medium text-lg">Eventmakers Logo</div>
+        <div className="font-medium text-lg text-white">Eventmakers Logo</div>
         {session ? (
           <div className="flex gap-6 items-center">
             <Button variant="bordered" color="secondary">
@@ -29,7 +29,7 @@ export default async function Layout({ children }) {
           <Button
             as={Link}
             href="/login"
-            className="text-white hover:bg-indigo-700"
+            className="text-white bg-indigo-700 hover:bg-opacity-55"
           >
             Log In
           </Button>
