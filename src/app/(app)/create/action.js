@@ -1,5 +1,8 @@
 "use server";
 
+import { auth } from "@/libs/auth";
+import { prisma } from "@/utils/prisma";
+
 export async function createEventAction(_, formData) {
   const title = formData.get("title");
   const image = formData.get("image");
