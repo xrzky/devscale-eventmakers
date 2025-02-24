@@ -13,7 +13,7 @@ export const DropdownUser = ({ session }) => {
   return (
     <Dropdown showArrow>
       <DropdownTrigger>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center cursor-pointer">
           <div className="text-white">{session.user.name}</div>
           <Avatar
             size={28}
