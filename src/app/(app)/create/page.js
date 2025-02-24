@@ -8,7 +8,7 @@ export default function Page() {
   const [state, formAction, pending] = useActionState(createEventAction, null);
 
   return (
-    <div className="bg-stone-950 flex items-center justify-center h-max">
+    <div className="flex items-center justify-center h-max">
       <form
         action={formAction}
         className="w-1/2 space-y-4 shadow-md p-8 border-lg border-white"
