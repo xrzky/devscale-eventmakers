@@ -4,6 +4,7 @@ import { Button, Input } from "@heroui/react";
 import Link from "next/link";
 import { useActionState } from "react";
 import { loginAction } from "./action";
+import { OauthButton } from "../_components/oauthButton";
 
 export default function Page() {
   const [state, formAction, pending] = useActionState(loginAction, null);
@@ -41,6 +42,7 @@ export default function Page() {
             Log in
           </Button>
         </form>
+        <OauthButton />
       </section>
       {state?.status === "error" && (
         <div className="text-center text-rose-600 bg-rose-50 p-2 rounded-md">
@@ -56,7 +58,9 @@ export default function Page() {
       <section className="flex gap-x-2">
         <p className="text-white">Don't have an account?</p>
         <Link href="/register">
-          <p className="text-white hover:text-indigo-500 hover:underline">Register here</p>
+          <p className="text-white hover:text-indigo-500 hover:underline">
+            Register here
+          </p>
         </Link>
       </section>
     </main>
