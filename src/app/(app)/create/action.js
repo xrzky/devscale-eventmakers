@@ -1,6 +1,7 @@
 "use server";
 
 import { auth } from "@/libs/auth";
+import { uploadFile } from "@/libs/file-ops";
 import { prisma } from "@/utils/prisma";
 
 export async function createEventAction(_, formData) {
@@ -36,6 +37,8 @@ export async function createEventAction(_, formData) {
       authorId: session.user.id,
     },
   });
+
+  await uploadFile({ key: image.name, folder: newEvent.id, body: image });
 
   return {
     status: "success",

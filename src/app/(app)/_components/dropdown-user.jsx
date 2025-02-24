@@ -14,7 +14,7 @@ export const DropdownUser = ({ session }) => {
     <Dropdown showArrow>
       <DropdownTrigger>
         <div className="flex gap-2 items-center">
-          <div>{session.user.name}</div>
+          <div className="text-white">{session.user.name}</div>
           <Avatar
             size={28}
             name={session.user.name}
