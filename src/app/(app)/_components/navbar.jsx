@@ -44,7 +44,8 @@ export const Navbar = async () => {
           <Button
             as={Link}
             href="/login"
-            className="text-white bg-indigo-700 hover:bg-opacity-55"
+            radius="sm"
+            className="bg-transparent border-2 border-gray-400 text-white font-semibold hover:bg-indigo-500  hover:border-white"
           >
             Log In
           </Button>
