@@ -4,6 +4,8 @@ import { EventCard } from './event-card'
 export const SectionEvents = async () => {
   const events = await prisma.event.findMany()
 
+  await new Promise((resolve) => setTimeout(resolve, 3000))
+
   return (
     <section className="space-y-4 pt-8">
       <h1 className="text-white text-2xl font-semibold">Popular Events</h1>
