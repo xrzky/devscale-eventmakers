@@ -22,7 +22,7 @@ export default async function Page({ params }) {
       <div className="w-2/6 border-2 rounded-lg border-white p-6">
         <Image
           alt={events.image}
-          src={events.image}
+          src={`https://pub-bda5341f88164a64ae18545c6f50320f.r2.dev/eventmakers/${id}/${events.image}`}
           unoptimized
           className="object-cover rounded-xl w-full h-full"
           width={270}
